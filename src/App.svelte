@@ -17,6 +17,7 @@
   let adjective = 'smart'
   let first = 'accent', second = 'future'
   let checked = []
+  let subtraction = name[name.length-1]
 
   onMount(() => {
     checked[5].checked = false
@@ -79,7 +80,7 @@
 
 <Equation title="Appending" summary="Append a short ending to your name." bind:a={name} bind:b={ending} formula={(a, b) => `${a}${b}`} showRefresh="b" on:refresh={refreshEnding}/>
 
-<Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={name[name.length-1]} op="-" formula={replaceEndings}/>
+<Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={subtraction} op="-" formula={replaceEndings}/>
 
 <Equation title="Adjectives" summary="Add an adjective prefix to the name." bind:a={adjective} bind:b={name} formula={(a, b) => `${a} ${b}`} showRefresh="a" on:refresh={refreshAdjective}/>
 
