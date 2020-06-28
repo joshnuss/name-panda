@@ -69,6 +69,7 @@
 <!-- TODO add local storage store -->
 <!-- TODO when refreshing make sure to not use last value -->
 
+<div class="container">
 
 <h1>
   SaaS Name Generator
@@ -96,6 +97,7 @@
 <footer>
   Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>. Idea from <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>.
 </footer>
+</div>
 
 <style>
   :global(body) {
@@ -125,5 +127,13 @@
     color: #eee;
     font-size: 0.9em;
     margin-bottom: 2rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .container {
+      min-width: 900px;
+      max-width: 60vw;
+      margin: auto;
+    }
   }
 </style>
