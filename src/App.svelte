@@ -103,6 +103,9 @@
   :global(body) {
     background: cornflowerblue;
   }
+  h1 {
+    margin: 2em 0;
+  }
   a, h1 {
     color: white;
     text-decoration: underline;
