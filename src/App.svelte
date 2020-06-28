@@ -4,6 +4,14 @@
   import adjectives from './adjectives.js'
   import { onMount } from 'svelte'
 
+  const names = [
+    'cart',
+    'payment',
+    'order',
+    'mail',
+    'ship',
+    'box',
+  ]
   const endings = [
     "ify",
     "ly",
@@ -13,7 +21,7 @@
   ]
   const vowels = "aeiouy"
 
-  let name = "cart"
+  let name = getRandomItem(names)
   let animal = animals[getRandomInt(animals.length)]
   let ending = endings[getRandomInt(endings.length)]
   let adjective = 'smart'
