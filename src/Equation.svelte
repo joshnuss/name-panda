@@ -67,10 +67,15 @@
 <style>
   .card {
     background: #eee;
-    padding: 1rem;
-    margin-bottom: 13px;
+    padding: 2rem;
+    margin-bottom: 1rem;
     border-radius: 0.2em;
     box-shadow: 1px 1px #ddd;
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    color: #888;
   }
 
   .container {
@@ -98,7 +103,7 @@
   }
 
   h2 {
-    flex: 0 0 100%;
+    color: #444;
   }
 
   .input-wrapper {
@@ -112,6 +117,7 @@
     width: 100%;
     border: none;
     background: none;
+    margin: 0;
   }
 
   .input-wrapper input:focus {
@@ -119,7 +125,7 @@
   }
   .input-wrapper button {
     flex: 1;
-    margin: none;
+    margin: 0;
   }
 
   button {
