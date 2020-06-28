@@ -93,15 +93,15 @@
   SaaS Name Generator
 </h1>
 
-<Equation title="Animals" summary="Add an animal to the end of a name." bind:a={name} bind:b={animal} formula={(a, b) => `${a} ${b}`} showRefresh="b" on:refresh={refreshAnimal}/>
+<Equation title="Animals" summary="Add an animal to the end of a name." bind:a={name} bind:b={animal} labelA="Name" labelB="Animal" formula={(a, b) => `${a} ${b}`} showRefresh="b" on:refresh={refreshAnimal}/>
 
-<Equation title="Appending" summary="Append a short ending to your name." bind:a={name} bind:b={ending} formula={(a, b) => `${a}${b}`} showRefresh="b" on:refresh={refreshEnding}/>
+<Equation title="Appending" summary="Append a short ending to your name." bind:a={name} bind:b={ending} labelA="Name" labelB="Ending" formula={(a, b) => `${a}${b}`} showRefresh="b" on:refresh={refreshEnding}/>
 
-<Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={subtraction} op="-" formula={replaceEndings}/>
+<Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={subtraction} labelA="Name" labelB="Pattern" op="-" formula={replaceEndings}/>
 
-<Equation title="Adjectives" summary="Add an adjective prefix to the name." bind:a={adjective} bind:b={name} formula={(a, b) => `${a} ${b}`} showRefresh="a" on:refresh={refreshAdjective}/>
+<Equation title="Adjectives" summary="Add an adjective prefix to the name." bind:a={adjective} bind:b={name} labelA="Adjective" labelB="Name" formula={(a, b) => `${a} ${b}`} showRefresh="a" on:refresh={refreshAdjective}/>
 
-<Equation title="Joining" summary="Join multiple words together and remove some parts." bind:a={first} bind:b={second} formula={(a, b) => value}>
+<Equation title="Joining" summary="Join multiple words together and remove some parts." bind:a={first} bind:b={second} labelA="First word" labelB="Second word" formula={(a, b) => value}>
   <div class="checklist">
     {#each checked as char, index}
       <label on:click={() => toggleChecked(index)} class:checked={char.checked}>
@@ -110,7 +110,7 @@
     {/each}
   </div>
 </Equation>
-<Equation title="Removing vowels" summary="Remove one or more vowels from the name" bind:a={name} b={vowels} op="-" formula={(a, b) => a.replace(new RegExp(`${b.split('').map(x => '(' + x + ')').join('|')}`, 'g'),"")}/>
+<Equation title="Removing vowels" summary="Remove one or more vowels from the name" bind:a={name} b={vowels} op="-" labelA="Name" labelB="Vowels" formula={(a, b) => a.replace(new RegExp(`${b.split('').map(x => '(' + x + ')').join('|')}`, 'g'),"")}/>
 
 <footer>
   Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>. Idea from <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>.
