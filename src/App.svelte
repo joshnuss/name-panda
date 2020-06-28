@@ -33,18 +33,25 @@
   $: value = checked.reduce((acc, char) =>  { return acc + (char.checked ? char.letter : '') }, '')
 
   function refreshAnimal() {
-    const index = getRandomInt(animals.length)
-    animal = animals[index]
+    animal = getRandomItem(animals, animal)
   }
 
   function refreshEnding() {
-    const index = getRandomInt(endings.length)
-    ending = endings[index]
+    ending = getRandomItem(endings, ending)
   }
 
   function refreshAdjective() {
-    const index = getRandomInt(adjectives.length)
-    adjective = adjectives[index]
+    adjective = getRandomItem(adjectives, adjective)
+  }
+
+  function getRandomItem(list, current) {
+    const index = getRandomInt(list.length)
+    const item = list[index]
+
+    if (item == current)
+      return getRandomItem(list, current)
+
+    return item
   }
 
   function getRandomInt(max) {
