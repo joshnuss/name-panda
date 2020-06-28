@@ -94,7 +94,7 @@
 <Equation title="Removing vowels" summary="Remove one or more vowels from the name" bind:a={name} b={vowels} op="-" formula={(a, b) => a.replace(new RegExp(`${vowels.split('').join('|')}`, 'g'),"")}/>
 
 <footer>
-  By <a href="https://twitter.com/joshnuss">@joshnuss</a>
+  Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>, idea from <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>.
 </footer>
 
 <style>
