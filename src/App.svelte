@@ -125,6 +125,7 @@
   }
   label.checked:hover {
     text-decoration: underline;
+    background: pink;
   }
 
   footer {
