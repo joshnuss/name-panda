@@ -7,7 +7,9 @@
   const endings = [
     "ify",
     "ly",
-    "io"
+    "io",
+    "ium",
+    "r"
   ]
   const vowels = "aeiouy"
 
