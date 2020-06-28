@@ -81,7 +81,7 @@
 
 <Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={name[name.length-1]} op="-" formula={replaceEndings}/>
 
-<Equation title="Adjectives" summary="Add an adjective prefix to the name." bind:a={adjective} bind:b={name} formula={(a, b) => `${a} ${b}`} showRefresh="b" on:refresh={refreshAdjective}/>
+<Equation title="Adjectives" summary="Add an adjective prefix to the name." bind:a={adjective} bind:b={name} formula={(a, b) => `${a} ${b}`} showRefresh="a" on:refresh={refreshAdjective}/>
 
 <Equation title="Joining" summary="Join multiple words together and remove some parts." bind:a={first} bind:b={second} formula={(a, b) => value}>
   <div class="checklist">
