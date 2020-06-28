@@ -66,11 +66,11 @@
 
 <style>
   .card {
-    background: #eee;
+    background: floralwhite;
     padding: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border-radius: 0.2em;
-    box-shadow: 1px 1px #ddd;
+    border: solid 1px white;
     font-size: 1.3rem;
   }
 
@@ -90,16 +90,15 @@
     font-weight: bold;
     color: #666;
     align-self: center;
-
   }
 
   .op {
     margin: 0 0.5rem;
   }
 
-
   .output a {
-    color: aqua
+    color: cornflowerblue;
+    font-size: 1.2em;
   }
 
   h2 {
@@ -129,7 +128,7 @@
   }
 
   button {
-    color: green;
+    color: limegreen;
     background: none;
     border: none;
     cursor: pointer;
