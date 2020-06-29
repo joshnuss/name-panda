@@ -2,6 +2,7 @@
   import Equation from './Equation.svelte'
   import animals from './animals.js'
   import adjectives from './adjectives.js'
+  import colors from './colors.js'
   import { onMount } from 'svelte'
 
   const names = [
@@ -24,6 +25,7 @@
   let name = getRandomItem(names)
   let animal = animals[getRandomInt(animals.length)]
   let ending = endings[getRandomInt(endings.length)]
+  let color = colors[getRandomInt(colors.length)]
   let adjective = 'smart'
   let first = 'accent', second = 'future'
   let checked = []
@@ -52,6 +54,10 @@
 
   function refreshAdjective() {
     adjective = getRandomItem(adjectives, adjective)
+  }
+
+  function refreshColor() {
+    color = getRandomItem(colors, color)
   }
 
   function getRandomItem(list, current) {
@@ -100,6 +106,8 @@
 <Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={subtraction} labelA="Name" labelB="Pattern" op="-" formula={replaceEndings}/>
 
 <Equation title="Adjectives" summary="Add an adjective prefix to the name." bind:a={adjective} bind:b={name} labelA="Adjective" labelB="Name" formula={(a, b) => `${a} ${b}`} showRefresh="a" on:refresh={refreshAdjective}/>
+
+<Equation title="Colors" summary="Add a color prefix to the name." bind:a={color} bind:b={name} labelA="Color" labelB="Name" formula={(a, b) => `${a} ${b}`} showRefresh="a" on:refresh={refreshColor}/>
 
 <Equation title="Joining" summary="Join multiple words together and remove some parts." bind:a={first} bind:b={second} labelA="First word" labelB="Second word" formula={(a, b) => value}>
   <div class="checklist">
