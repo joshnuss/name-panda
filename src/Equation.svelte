@@ -3,7 +3,7 @@
   const dispatch = createEventDispatcher()
 
   export let title, summary, labelA, labelB
-  export let op = "+", a = "", b = "", formula = (a, b) => '???', showRefresh = null
+  export let op = '+', a = '', b = '', formula = () => '???', showRefresh = null
 
   $: value = formula(a, b)
 </script>
@@ -18,7 +18,7 @@
     <div class="input-wrapper">
       <input bind:value={a}/>
 
-      {#if showRefresh=="a"}
+      {#if showRefresh=='a'}
       <button on:click|preventDefault={() => dispatch('refresh')} title="Generate another">
         <svg width="16px" height="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -41,7 +41,7 @@
     <div class="input-wrapper">
       <input bind:value={b}/>
 
-      {#if showRefresh=="b"}
+      {#if showRefresh=='b'}
       <button on:click|preventDefault={() => dispatch('refresh')} title="Generate another">
         <svg width="16px" height="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

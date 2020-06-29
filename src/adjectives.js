@@ -1096,4 +1096,4 @@ export default [
   'zesty',
   'zippy',
   'zonked',
-];
+]

@@ -14,13 +14,13 @@
     'box',
   ]
   const endings = [
-    "ify",
-    "ly",
-    "io",
-    "ium",
-    "r"
+    'ify',
+    'ly',
+    'io',
+    'ium',
+    'r'
   ]
-  const vowels = "aeiouy"
+  const vowels = 'aeiouy'
 
   let name = getRandomItem(names)
   let animal = animals[getRandomInt(animals.length)]
@@ -71,17 +71,17 @@
   }
 
   function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    return Math.floor(Math.random() * Math.floor(max))
   }
 
   function replaceEndings(a, b) {
-    let replaced = a.replace(new RegExp(`${b}$`), "")
+    let replaced = a.replace(new RegExp(`${b}$`), '')
     if (replaced != a) return replaced
 
-    replaced = a.replace(new RegExp(`^${b}`), "")
+    replaced = a.replace(new RegExp(`^${b}`), '')
     if (replaced != a) return replaced
 
-    return a.replace(new RegExp(b, 'g'), "")
+    return a.replace(new RegExp(b, 'g'), '')
   }
 
   function toggleChecked(index) {
@@ -109,7 +109,7 @@
 
 <Equation title="Colors" summary="Add a color prefix to the name." bind:a={color} bind:b={name} labelA="Color" labelB="Name" formula={(a, b) => `${a} ${b}`} showRefresh="a" on:refresh={refreshColor}/>
 
-<Equation title="Joining" summary="Join multiple words together and remove some parts." bind:a={first} bind:b={second} labelA="First word" labelB="Second word" formula={(a, b) => value}>
+<Equation title="Joining" summary="Join multiple words together and remove some parts." bind:a={first} bind:b={second} labelA="First word" labelB="Second word" formula={() => value}>
   <div class="checklist">
     {#each checked as char, index}
       <label on:click={() => toggleChecked(index)} class:checked={char.checked}>
@@ -118,7 +118,7 @@
     {/each}
   </div>
 </Equation>
-<Equation title="Removing vowels" summary="Remove one or more vowels from the name" bind:a={name} b={vowels} op="-" labelA="Name" labelB="Vowels" formula={(a, b) => a.replace(new RegExp(`${b.split('').map(x => '(' + x + ')').join('|')}`, 'g'),"")}/>
+<Equation title="Removing vowels" summary="Remove one or more vowels from the name" bind:a={name} b={vowels} op="-" labelA="Name" labelB="Vowels" formula={(a, b) => a.replace(new RegExp(`${b.split('').map(x => '(' + x + ')').join('|')}`, 'g'),'')}/>
 
 <footer>
   Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>. Idea from <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>.
