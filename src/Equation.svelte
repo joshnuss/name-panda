@@ -92,7 +92,8 @@
   .op, .output {
     font-weight: bold;
     color: #666;
-    align-self: center;
+    align-self: flex-end;
+    line-height: 2rem;
   }
 
   .op {
