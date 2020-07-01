@@ -20,7 +20,7 @@
     'ium',
     'r'
   ]
-  const vowels = 'aeiouy'
+  const vowels = 'aeiou'
 
   let name = getRandomItem(names)
   let animal = animals[getRandomInt(animals.length)]
