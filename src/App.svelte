@@ -95,9 +95,14 @@
 
 <div class="container">
 
-<h1>
-  SaaS Name Generator
-</h1>
+  <header>
+    <h1>SaaS Name Generator</h1>
+
+    <p>
+      Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>
+    </p>
+  </header>
+
 
 <Equation title="Animals" summary="Add an animal to the end of a name." bind:a={name} bind:b={animal} labelA="Name" labelB="Animal" formula={(a, b) => `${a} ${b}`} showRefresh="b" on:refresh={refreshAnimal}/>
 
@@ -121,7 +126,7 @@
 <Equation title="Removing vowels" summary="Remove one or more vowels from the name" bind:a={name} b={vowels} op="-" labelA="Name" labelB="Vowels" formula={(a, b) => a.replace(new RegExp(`${b.split('').map(x => '(' + x + ')').join('|')}`, 'g'),'')}/>
 
 <footer>
-  Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>. Idea from <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>.
+  Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>.
 </footer>
 </div>
 
@@ -130,8 +135,19 @@
     background: cornflowerblue;
   }
   h1 {
-    margin: 2em 0;
+    margin: 2em 0 0.5em;
   }
+  p {
+    color: white;
+  }
+  p a {
+    font-weight: bold;
+  }
+
+  header {
+    margin-bottom: 3rem;
+  }
+
   a, h1 {
     color: white;
     text-decoration: underline;
