@@ -23,7 +23,7 @@
   const vowels = 'aeiou'
 
   let name = getRandomItem(names)
-  let animal = animals[getRandomInt(animals.length)]
+  let animal = 'panda'
   let ending = endings[getRandomInt(endings.length)]
   let color = colors[getRandomInt(colors.length)]
   let adjective = 'smart'
