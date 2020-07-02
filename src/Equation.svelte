@@ -61,7 +61,9 @@
   </span>
 
   <span class="output">
-    <a href="https://domains.google.com/m/registrar/search?searchTerm={value}&tab=1" target="_blank">{ value }</a>
+    <a title="Check if domain is available" href="https://domains.google.com/m/registrar/search?searchTerm={value}&tab=1" target="_blank">
+      { value }
+    </a>
     <slot/>
   </span>
   </div>
@@ -103,6 +105,7 @@
   .output a {
     color: cornflowerblue;
     font-size: 1.2em;
+    text-decoration: underline;
   }
 
   h2 {
