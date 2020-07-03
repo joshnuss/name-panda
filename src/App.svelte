@@ -97,7 +97,7 @@
   <header>
     <h1>🐼 Name Panda</h1>
     <p>
-      Generate a name for your SaaS product. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>
+    Generate a name for your SaaS product. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetric's tweet</a>
     </p>
   </header>
 
@@ -124,7 +124,7 @@
 <Equation title="Removing vowels" summary="Remove one or more vowels from the name" bind:a={name} b={vowels} op="-" labelA="Name" labelB="Vowels" formula={(a, b) => a.replace(new RegExp(`${b.split('').map(x => '(' + x + ')').join('|')}`, 'g'),'')}/>
 
 <footer>
-  Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>.
+  Site by <a href="https://twitter.com/joshnuss">@joshnuss</a>. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetric's tweet</a>.
 </footer>
 </div>
 
