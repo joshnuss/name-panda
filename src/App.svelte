@@ -96,10 +96,9 @@
 <div class="container">
 
   <header>
-    <h1>SaaS Name Generator</h1>
-
+    <h1>🐼 Name Panda</h1>
     <p>
-      Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>
+      Generate a name for your Saas. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>
     </p>
   </header>
 
@@ -150,8 +149,12 @@
 
   a, h1 {
     color: white;
+  }
+
+  a {
     text-decoration: underline;
   }
+
   .checklist label {
     font-size: 2rem;
     display: inline-block;

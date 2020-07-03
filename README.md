@@ -1,6 +1,8 @@
-# SaaS Name Generator
+# NamePanda
 
-[https://saasnamegenerator.com](https://saasnamegenerator.com)
+Generate a name for your SaaS.
+
+[https://namepanda.net](https://namepanda.net)
 
 Based on [tweet from @Baremetrics](https://twitter.com/Baremetrics/status/1276543395008307201)
 
