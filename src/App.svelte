@@ -98,7 +98,7 @@
   <header>
     <h1>🐼 Name Panda</h1>
     <p>
-      Generate a name for your SaaS. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>
+      Generate a name for your SaaS product. Inspired by <a href="https://twitter.com/Baremetrics/status/1276543395008307201">@baremetrics tweet</a>
     </p>
   </header>
 
