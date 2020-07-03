@@ -91,7 +91,6 @@
 </script>
 
 <!-- TODO add local storage store -->
-<!-- TODO when refreshing make sure to not use last value -->
 
 <div class="container">
 
