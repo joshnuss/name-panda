@@ -11,68 +11,69 @@
 <div class="card">
   <h2>{title}</h2>
   <p>{summary}</p>
+
   <div class="container">
 
-  <div class="field">
-    <label>{labelA}</label>
-    <div class="input-wrapper">
-      <input bind:value={a}/>
+    <div class="field">
+      <label>{labelA}</label>
+      <div class="input-wrapper">
+        <input bind:value={a}/>
 
-      {#if showRefresh=='a'}
-      <button on:click|preventDefault={() => dispatch('refresh')} title="Generate another">
-        <svg width="16px" height="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="refresh" fill="#000000">
-                    <path d="M10,3 C6.13400675,3 3,6.13400675 3,10 C3,11.9329966 3.78350169,13.6829966 5.05025253,14.9497475 L6.46446609,13.5355339 C5.55964406,12.6307119 5,11.3807119 5,10 C5,7.23857625 7.23857625,5 10,5 L10,3 L10,3 Z M14.9497475,5.05025253 C16.2164983,6.31700338 17,8.06700338 17,10 C17,13.8659932 13.8659932,17 10,17 L10,15 C12.7614237,15 15,12.7614237 15,10 C15,8.61928813 14.4403559,7.36928813 13.5355339,6.46446609 L14.9497475,5.05025253 L14.9497475,5.05025253 Z M10,20 L6,16 L10,12 L10,20 L10,20 Z M10,8 L14,4 L10,0 L10,8 L10,8 Z" id="Combined-Shape"></path>
-                </g>
-            </g>
-        </svg>
-      </button>
-      {/if}
+        {#if showRefresh=='a'}
+        <button on:click|preventDefault={() => dispatch('refresh')} title="Generate another">
+          <svg width="16px" height="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="refresh" fill="#000000">
+                      <path d="M10,3 C6.13400675,3 3,6.13400675 3,10 C3,11.9329966 3.78350169,13.6829966 5.05025253,14.9497475 L6.46446609,13.5355339 C5.55964406,12.6307119 5,11.3807119 5,10 C5,7.23857625 7.23857625,5 10,5 L10,3 L10,3 Z M14.9497475,5.05025253 C16.2164983,6.31700338 17,8.06700338 17,10 C17,13.8659932 13.8659932,17 10,17 L10,15 C12.7614237,15 15,12.7614237 15,10 C15,8.61928813 14.4403559,7.36928813 13.5355339,6.46446609 L14.9497475,5.05025253 L14.9497475,5.05025253 Z M10,20 L6,16 L10,12 L10,20 L10,20 Z M10,8 L14,4 L10,0 L10,8 L10,8 Z" id="Combined-Shape"></path>
+                  </g>
+              </g>
+          </svg>
+        </button>
+        {/if}
+      </div>
     </div>
-  </div>
 
-  <span class="op">
-    {op}
-  </span>
+    <span class="op">
+      {op}
+    </span>
 
-  <div class="field">
-    <label>{labelB}</label>
-    <div class="input-wrapper">
-      <input bind:value={b}/>
+    <div class="field">
+      <label>{labelB}</label>
+      <div class="input-wrapper">
+        <input bind:value={b}/>
 
-      {#if showRefresh=='b'}
-      <button on:click|preventDefault={() => dispatch('refresh')} title="Generate another">
-        <svg width="16px" height="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="refresh" fill="#000000">
-                    <path d="M10,3 C6.13400675,3 3,6.13400675 3,10 C3,11.9329966 3.78350169,13.6829966 5.05025253,14.9497475 L6.46446609,13.5355339 C5.55964406,12.6307119 5,11.3807119 5,10 C5,7.23857625 7.23857625,5 10,5 L10,3 L10,3 Z M14.9497475,5.05025253 C16.2164983,6.31700338 17,8.06700338 17,10 C17,13.8659932 13.8659932,17 10,17 L10,15 C12.7614237,15 15,12.7614237 15,10 C15,8.61928813 14.4403559,7.36928813 13.5355339,6.46446609 L14.9497475,5.05025253 L14.9497475,5.05025253 Z M10,20 L6,16 L10,12 L10,20 L10,20 Z M10,8 L14,4 L10,0 L10,8 L10,8 Z" id="Combined-Shape"></path>
-                </g>
-            </g>
-        </svg>
-      </button>
-      {/if}
+        {#if showRefresh=='b'}
+        <button on:click|preventDefault={() => dispatch('refresh')} title="Generate another">
+          <svg width="16px" height="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="refresh" fill="#000000">
+                      <path d="M10,3 C6.13400675,3 3,6.13400675 3,10 C3,11.9329966 3.78350169,13.6829966 5.05025253,14.9497475 L6.46446609,13.5355339 C5.55964406,12.6307119 5,11.3807119 5,10 C5,7.23857625 7.23857625,5 10,5 L10,3 L10,3 Z M14.9497475,5.05025253 C16.2164983,6.31700338 17,8.06700338 17,10 C17,13.8659932 13.8659932,17 10,17 L10,15 C12.7614237,15 15,12.7614237 15,10 C15,8.61928813 14.4403559,7.36928813 13.5355339,6.46446609 L14.9497475,5.05025253 L14.9497475,5.05025253 Z M10,20 L6,16 L10,12 L10,20 L10,20 Z M10,8 L14,4 L10,0 L10,8 L10,8 Z" id="Combined-Shape"></path>
+                  </g>
+              </g>
+          </svg>
+        </button>
+        {/if}
 
+      </div>
     </div>
-  </div>
 
-  <span class="op">
-    =
-  </span>
+    <span class="op">
+      =
+    </span>
 
-  <span class="output">
-    <a title="Check if domain is available" href="https://domains.google.com/m/registrar/search?searchTerm={value}&tab=1" target="_blank">
-      { value }
-    </a>
-    <slot/>
-  </span>
+    <span class="output">
+      <a title="Check if domain is available" href="https://domains.google.com/m/registrar/search?searchTerm={value}&tab=1" target="_blank">
+        { value }
+      </a>
+      <slot/>
+    </span>
   </div>
 </div>
 
 <style>
   .card {
     background: floralwhite;
-    padding: 2rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 0.2em;
     border: solid 1px white;
@@ -80,7 +81,9 @@
   }
 
   .card p {
+    font-size: 0.9rem;
     color: #888;
+    margin: 0.5em 0 1em 0;
   }
 
   .container {
@@ -104,12 +107,14 @@
 
   .output a {
     color: cornflowerblue;
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: underline;
   }
 
   h2 {
+    font-size: 1.5rem;
     color: #444;
+    margin: 0.5em 0;
   }
 
   .field label {
@@ -122,6 +127,7 @@
     display: flex;
     border-radius: 0.3rem;
     background: #fff;
+    font-size: 0.9rem;
   }
 
   .input-wrapper input {
@@ -150,5 +156,29 @@
   }
   svg path {
     fill: currentColor
+  }
+
+  @media only screen and (min-width: 768px) {
+    .card {
+      padding: 2rem;
+    }
+
+    h2 {
+      margin: 0.5em 0 0.5em 0;
+      font-size: 2rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin: 0 0 1em 0;
+    }
+
+    .input-wrapper {
+      font-size: 1.3rem;
+    }
+
+    .output a {
+      font-size: 1.2em;
+    }
   }
 </style>
