@@ -18,13 +18,36 @@
     'ly',
     'io',
     'ium',
-    'r'
+    'r',
+    'app',
+    'club',
+    'hq',
+    'please',
+  ]
+  const prefixes = [
+    'check',
+    'club',
+    'do',
+    'get',
+    'give',
+    'go',
+    'grab',
+    'hello',
+    'hey',
+    'join',
+    'lets',
+    'the',
+    'try',
+    'use',
+    'wear',
+    'why',
   ]
   const vowels = 'aeiou'
 
   let name = getRandomItem(names)
   let animal = 'panda'
   let ending = endings[getRandomInt(endings.length)]
+  let prefix = prefixes[getRandomInt(prefixes.length)]
   let color = colors[getRandomInt(colors.length)]
   let adjective = 'smart'
   let first = 'accent', second = 'future'
@@ -50,6 +73,10 @@
 
   function refreshEnding() {
     ending = getRandomItem(endings, ending)
+  }
+
+  function refreshPrefix() {
+    prefix = getRandomItem(prefixes, prefix)
   }
 
   function refreshAdjective() {
@@ -104,7 +131,9 @@
 
 <Equation title="Animals" summary="Add an animal to the end of a name." bind:a={name} bind:b={animal} labelA="Name" labelB="Animal" formula={(a, b) => `${a} ${b}`} showRefresh="b" on:refresh={refreshAnimal}/>
 
-<Equation title="Appending" summary="Append a short ending to your name." bind:a={name} bind:b={ending} labelA="Name" labelB="Ending" formula={(a, b) => `${a}${b}`} showRefresh="b" on:refresh={refreshEnding}/>
+<Equation title="Appending" summary="Append a short suffic to your name." bind:a={name} bind:b={ending} labelA="Name" labelB="Ending" formula={(a, b) => `${a}${b}`} showRefresh="b" on:refresh={refreshEnding}/>
+
+<Equation title="Prepending" summary="Prepend a short prefix to your name." bind:a={prefix} bind:b={name} labelA="Prefix" labelB="Name" formula={(a, b) => `${a}${b}`} showRefresh="a" on:refresh={refreshPrefix}/>
 
 <Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={subtraction} labelA="Name" labelB="Pattern" op="-" formula={replaceEndings}/>
 
