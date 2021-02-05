@@ -131,9 +131,9 @@
 
 <Equation title="Animals" summary="Add an animal to the end of a name." bind:a={name} bind:b={animal} labelA="Name" labelB="Animal" formula={(a, b) => `${a} ${b}`} showRefresh="b" on:refresh={refreshAnimal}/>
 
-<Equation title="Appending" summary="Append a short suffic to your name." bind:a={name} bind:b={ending} labelA="Name" labelB="Ending" formula={(a, b) => `${a}${b}`} showRefresh="b" on:refresh={refreshEnding}/>
+<Equation title="Suffix" summary="Append a short suffic to your name." bind:a={name} bind:b={ending} labelA="Name" labelB="Ending" formula={(a, b) => `${a}${b}`} showRefresh="b" on:refresh={refreshEnding}/>
 
-<Equation title="Prepending" summary="Prepend a short prefix to your name." bind:a={prefix} bind:b={name} labelA="Prefix" labelB="Name" formula={(a, b) => `${a}${b}`} showRefresh="a" on:refresh={refreshPrefix}/>
+<Equation title="Prefix" summary="Prepend a short prefix to your name." bind:a={prefix} bind:b={name} labelA="Prefix" labelB="Name" formula={(a, b) => `${a}${b}`} showRefresh="a" on:refresh={refreshPrefix}/>
 
 <Equation title="Text Subtraction" summary="Subtract part of the name." bind:a={name} b={subtraction} labelA="Name" labelB="Pattern" op="-" formula={replaceEndings}/>
 
